@@ -5,8 +5,11 @@ Simple macOS display layout manager. Save and restore your multi-monitor configu
 ## Installation
 
 ```bash
-chmod +x display-manager.swift
-ln -s $(pwd)/display-manager.swift /usr/local/bin/display-manager
+# Compile
+swiftc -O -o display-manager display-manager.swift -framework CoreGraphics -framework Foundation
+
+# Install
+sudo cp display-manager /usr/local/bin/
 ```
 
 ## Usage
